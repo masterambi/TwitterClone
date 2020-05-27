@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C705C5A247E481000C6A308 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C705C59247E481000C6A308 /* FeedController.swift */; };
+		2C705C5C247E483C00C6A308 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C705C5B247E483C00C6A308 /* ExploreController.swift */; };
+		2C705C5E247E486400C6A308 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C705C5D247E486400C6A308 /* NotificationsController.swift */; };
+		2C705C60247E487400C6A308 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C705C5F247E487400C6A308 /* ConversationsController.swift */; };
 		2CB3CA06247E332600084940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3CA05247E332600084940 /* AppDelegate.swift */; };
 		2CB3CA08247E332600084940 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3CA07247E332600084940 /* SceneDelegate.swift */; };
 		2CB3CA0D247E332600084940 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB3CA0B247E332600084940 /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C705C59247E481000C6A308 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		2C705C5B247E483C00C6A308 /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
+		2C705C5D247E486400C6A308 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
+		2C705C5F247E487400C6A308 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		2CB3CA02247E332600084940 /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB3CA05247E332600084940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB3CA07247E332600084940 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +98,10 @@
 			isa = PBXGroup;
 			children = (
 				2CB3CA1F247E349800084940 /* MainTabController.swift */,
+				2C705C59247E481000C6A308 /* FeedController.swift */,
+				2C705C5B247E483C00C6A308 /* ExploreController.swift */,
+				2C705C5D247E486400C6A308 /* NotificationsController.swift */,
+				2C705C5F247E487400C6A308 /* ConversationsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,9 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C705C5E247E486400C6A308 /* NotificationsController.swift in Sources */,
+				2C705C60247E487400C6A308 /* ConversationsController.swift in Sources */,
 				2CB3CA06247E332600084940 /* AppDelegate.swift in Sources */,
+				2C705C5C247E483C00C6A308 /* ExploreController.swift in Sources */,
 				2CB3CA08247E332600084940 /* SceneDelegate.swift in Sources */,
 				2CB3CA20247E349800084940 /* MainTabController.swift in Sources */,
+				2C705C5A247E481000C6A308 /* FeedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
