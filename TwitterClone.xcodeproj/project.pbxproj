@@ -12,6 +12,8 @@
 		2C705C5E247E486400C6A308 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C705C5D247E486400C6A308 /* NotificationsController.swift */; };
 		2C705C60247E487400C6A308 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C705C5F247E487400C6A308 /* ConversationsController.swift */; };
 		2C705C62247E72E400C6A308 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C705C61247E72E400C6A308 /* Extensions.swift */; };
+		2C705C65247F788700C6A308 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C705C64247F788700C6A308 /* LoginController.swift */; };
+		2C705C67247F78F200C6A308 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C705C66247F78F200C6A308 /* RegistrationController.swift */; };
 		2CB3CA06247E332600084940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3CA05247E332600084940 /* AppDelegate.swift */; };
 		2CB3CA08247E332600084940 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3CA07247E332600084940 /* SceneDelegate.swift */; };
 		2CB3CA0D247E332600084940 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB3CA0B247E332600084940 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 		2C705C5D247E486400C6A308 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		2C705C5F247E487400C6A308 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		2C705C61247E72E400C6A308 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2C705C64247F788700C6A308 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		2C705C66247F78F200C6A308 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		2CB3CA02247E332600084940 /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB3CA05247E332600084940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB3CA07247E332600084940 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C705C63247F786400C6A308 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				2C705C64247F788700C6A308 /* LoginController.swift */,
+				2C705C66247F78F200C6A308 /* RegistrationController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		2CB3C9F9247E332600084940 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +113,7 @@
 		2CB3CA1B247E33A100084940 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2C705C63247F786400C6A308 /* Authentication */,
 				2CB3CA1F247E349800084940 /* MainTabController.swift */,
 				2C705C59247E481000C6A308 /* FeedController.swift */,
 				2C705C5B247E483C00C6A308 /* ExploreController.swift */,
@@ -205,9 +219,11 @@
 				2C705C60247E487400C6A308 /* ConversationsController.swift in Sources */,
 				2CB3CA06247E332600084940 /* AppDelegate.swift in Sources */,
 				2C705C62247E72E400C6A308 /* Extensions.swift in Sources */,
+				2C705C65247F788700C6A308 /* LoginController.swift in Sources */,
 				2C705C5C247E483C00C6A308 /* ExploreController.swift in Sources */,
 				2CB3CA08247E332600084940 /* SceneDelegate.swift in Sources */,
 				2CB3CA20247E349800084940 /* MainTabController.swift in Sources */,
+				2C705C67247F78F200C6A308 /* RegistrationController.swift in Sources */,
 				2C705C5A247E481000C6A308 /* FeedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
