@@ -62,11 +62,6 @@ class LoginController: UIViewController {
     }()
     
     // MARK: - Lifecycle
-    
-    @objc func handleShowSignUp() {
-        let controller = RegistrationController()
-        navigationController?.pushViewController(controller, animated: true)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,8 +71,23 @@ class LoginController: UIViewController {
     
     // MARK: - Selector
     
+    @objc func handleShowSignUp() {
+        let controller = RegistrationController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
     @objc func handleLogin() {
-        print("Handle login here...")
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        AuthService.shared.logUserIn(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print("DEBUG: Error logging in \(error.localizedDescription)")
+                return
+            }
+            
+            print("DEBUG: Successful log in...")
+        }
     }
     
     // MARK: - Helpers
