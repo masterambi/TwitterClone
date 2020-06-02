@@ -30,6 +30,14 @@ struct ProfileHeaderViewModel {
         return user.profileImageUrl
     }
     
+    var fullnameText: String {
+        return user.fullname
+    }
+    
+    var usernameText: String {
+        return "@\(user.username)"
+    }
+    
     var followersString: NSAttributedString? {
         return attributedText(withValue: 0, text: "followers")
     }

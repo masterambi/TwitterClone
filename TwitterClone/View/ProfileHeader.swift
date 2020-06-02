@@ -66,7 +66,6 @@ class ProfileHeader: UICollectionReusableView {
     private let fullnameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.text = "Eddie Brock"
         return label
     }()
     
@@ -74,7 +73,6 @@ class ProfileHeader: UICollectionReusableView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .lightGray
-        label.text = "@venom"
         return label
     }()
     
@@ -109,6 +107,12 @@ class ProfileHeader: UICollectionReusableView {
     private let underlineView: UIView = {
         let view = UIView()
         view.backgroundColor = .twitterBlue
+        return view
+    }()
+    
+    private let staticUnderlineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGroupedBackground
         return view
     }()
     
@@ -158,6 +162,9 @@ class ProfileHeader: UICollectionReusableView {
         addSubview(filterBar)
         filterBar.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 50)
         
+        addSubview(staticUnderlineView)
+        staticUnderlineView.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 1)
+        
         addSubview(underlineView)
         underlineView.anchor(left: leftAnchor, bottom: bottomAnchor,
                              width: frame.width / CGFloat(ProfileFilterOptions.allCases.count), height: 2)
@@ -196,6 +203,9 @@ class ProfileHeader: UICollectionReusableView {
         editProfileFollowButton.setTitle(viewModel.actionButtonTitle, for: .normal)
         followingLabel.attributedText = viewModel.followingString
         followersLabel.attributedText = viewModel.followersString
+        
+        fullnameLabel.text = viewModel.fullnameText
+        usernameLabel.text = viewModel.usernameText
     }
 }
 
