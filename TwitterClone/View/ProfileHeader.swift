@@ -112,13 +112,15 @@ class ProfileHeader: UICollectionReusableView {
         userDetailsStack.spacing = 4
         
         addSubview(userDetailsStack)
-        userDetailsStack.anchor(top: profileImageView.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8, paddingLeft: 12, paddingRight: 12)
+        userDetailsStack.anchor(top: profileImageView.bottomAnchor, left: leftAnchor,
+                                right: rightAnchor, paddingTop: 8, paddingLeft: 12, paddingRight: 12)
         
         addSubview(filterBar)
         filterBar.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 50)
         
         addSubview(underlineView)
-        underlineView.anchor(left: leftAnchor, bottom: bottomAnchor, width: frame.width / 3, height: 2)
+        underlineView.anchor(left: leftAnchor, bottom: bottomAnchor,
+                             width: frame.width / CGFloat(ProfileFilterOptions.allCases.count), height: 2)
     }
     
     required init?(coder: NSCoder) {
