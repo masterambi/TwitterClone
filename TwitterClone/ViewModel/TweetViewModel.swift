@@ -70,4 +70,34 @@ struct TweetViewModel {
         
         return attributedTitle
     }
+    
+    func size(forWidth width: CGFloat) -> CGSize {
+        let measurementLabel = UILabel()
+        measurementLabel.text = tweet.caption
+        measurementLabel.numberOfLines = 0
+        measurementLabel.lineBreakMode = .byWordWrapping
+        measurementLabel.translatesAutoresizingMaskIntoConstraints = false
+        measurementLabel.widthAnchor.constraint(equalToConstant: width - 72).isActive = true
+        
+        let measurementImage = UIImageView()
+        measurementImage.clipsToBounds = true
+        measurementImage.setDimensions(width: 48, height: 48)
+        measurementImage.layer.cornerRadius = 48 / 2
+        
+        let labelSize = measurementLabel.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        let imageSize = measurementImage.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        return labelSize.height > imageSize.height ? labelSize : imageSize
+    }
+    
+    func headerSize(forWidth width: CGFloat) -> CGSize {
+        let measurementLabel = UILabel()
+        measurementLabel.text = tweet.caption
+        measurementLabel.font = UIFont.systemFont(ofSize: 20)
+        measurementLabel.numberOfLines = 0
+        measurementLabel.lineBreakMode = .byWordWrapping
+        measurementLabel.translatesAutoresizingMaskIntoConstraints = false
+        measurementLabel.widthAnchor.constraint(equalToConstant: width - 32).isActive = true
+        
+        return measurementLabel.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+    }
 }
