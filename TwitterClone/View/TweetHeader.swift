@@ -137,10 +137,11 @@ class TweetHeader: UICollectionReusableView {
 
         let labelStack = UIStackView(arrangedSubviews: [fullnameLabel, usernameLabel])
         labelStack.axis = .vertical
-        labelStack.spacing = -6
+        labelStack.spacing = 0
         
         let stack = UIStackView(arrangedSubviews: [profileImageView, labelStack])
         stack.spacing = 12
+        stack.alignment = .center
         
         addSubview(stack)
         stack.anchor(top: topAnchor, left: leftAnchor, paddingTop: 16, paddingLeft: 16)
@@ -165,7 +166,7 @@ class TweetHeader: UICollectionReusableView {
         
         addSubview(actionStack)
         actionStack.centerX(inView: self)
-        actionStack.anchor(bottom: bottomAnchor, paddingBottom: 8)
+        actionStack.anchor(top: statsView.bottomAnchor, paddingTop: 8)
         
         addSubview(staticUnderlineView)
         staticUnderlineView.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 1)
