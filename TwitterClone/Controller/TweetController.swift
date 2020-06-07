@@ -120,7 +120,6 @@ extension TweetController: TweetHeaderDelegate {
                 self.showActionSheet(forUser: user)
             }
         }
-        
     }
 }
 

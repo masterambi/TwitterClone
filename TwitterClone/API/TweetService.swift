@@ -46,7 +46,7 @@ struct TweetService {
             
             UserService.shared.fetchUser(uid: uid) { user in
                 let tweet = Tweet(user: user, tweetID: tweetID, dictionary: dictionary)
-                tweets.insert(tweet, at: 0)
+                tweets.append(tweet)
                 completion(tweets)
             }
         }
@@ -63,7 +63,7 @@ struct TweetService {
                 
                 UserService.shared.fetchUser(uid: uid) { user in
                     let tweet = Tweet(user: user, tweetID: tweetID, dictionary: dictionary)
-                    tweets.insert(tweet, at: 0)
+                    tweets.append(tweet)
                     completion(tweets)
                 }
             }
@@ -81,7 +81,7 @@ struct TweetService {
             
             UserService.shared.fetchUser(uid: uid) { user in
                 let tweet = Tweet(user: user, tweetID: tweetID, dictionary: dictionary)
-                tweets.insert(tweet, at: 0)
+                tweets.append(tweet)
                 completion(tweets)
             }
         }
@@ -107,4 +107,11 @@ struct TweetService {
         }
     }
     
+    func checkIfUserLikedTweet(_ tweet: Tweet, completion: @escaping(Bool) -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        REF_USER_LIKES.child(uid).child(tweet.tweetID).observeSingleEvent(of: .value) { snapshot in
+            completion(snapshot.exists())
+        }
+    }
 }

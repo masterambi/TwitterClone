@@ -56,7 +56,7 @@ struct TweetViewModel {
     }
     
     var likeButtonTintColor: UIColor {
-        return tweet.didLike ? .red : .lightGray
+        return tweet.didLike ? .red : .darkGray
     }
     
     var likeButtonImage: UIImage {

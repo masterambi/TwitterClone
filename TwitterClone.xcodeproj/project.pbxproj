@@ -181,8 +181,8 @@
 				2C705C5B247E483C00C6A308 /* ExploreController.swift */,
 				2C705C5D247E486400C6A308 /* NotificationsController.swift */,
 				2C705C5F247E487400C6A308 /* ConversationsController.swift */,
-				2C1B31CC24825C4300E18E05 /* UploadTweetController.swift */,
 				2C1B31D82484F6EA00E18E05 /* ProfileController.swift */,
+				2C1B31CC24825C4300E18E05 /* UploadTweetController.swift */,
 				2C324F722488D78900B5DD03 /* TweetController.swift */,
 			);
 			path = Controller;
