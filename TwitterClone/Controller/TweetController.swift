@@ -38,6 +38,12 @@ class TweetController: UICollectionViewController {
         fetchReplies()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.barStyle = .default
+    }
+    
     // MARK: - API
     
     func fetchReplies() {
@@ -101,9 +107,13 @@ extension TweetController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let viewModel = TweetViewModel(tweet: replies[indexPath.row])
-        let height = viewModel.size(forWidth: view.frame.width).height
+        var height = viewModel.size(forWidth: view.frame.width).height + 80
         
-        return CGSize(width: view.frame.width, height: height + 80)
+        if !viewModel.shouldHideReplyLabel {
+            height += 20
+        }
+        
+        return CGSize(width: view.frame.width, height: height)
     }
 }
 
