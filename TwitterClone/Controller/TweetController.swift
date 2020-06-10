@@ -100,8 +100,13 @@ extension TweetController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
         let viewModel = TweetViewModel(tweet: tweet)
-        let captionHeight = viewModel.headerSize(forWidth: view.frame.width).height
-        return CGSize(width: view.frame.width, height: captionHeight + 200)
+        var captionHeight = viewModel.headerSize(forWidth: view.frame.width).height + 200
+        
+        if !viewModel.shouldHideReplyLabel {
+            captionHeight += 22
+        }
+        
+        return CGSize(width: view.frame.width, height: captionHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
